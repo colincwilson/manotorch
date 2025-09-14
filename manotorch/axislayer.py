@@ -5,7 +5,7 @@ import numpy as np
 import torch
 from torch.nn import Module
 
-from deprecation import deprecated
+#from deprecation import deprecated
 from manotorch.manolayer import ManoLayer
 from manotorch.utils.geometry import matrix_to_euler_angles, euler_angles_to_matrix, rotation_to_axis_angle
 
@@ -164,9 +164,9 @@ class AxisLayerFK(Module):
         return aa_p_par_chd
 
 
-@deprecated(deprecated_in="0.0.2",
-            removed_in="0.0.3",
-            details="This class is deprecated. Please use the new class 'AxisLayerFK' instead.")
+# @deprecated(deprecated_in="0.0.2",
+#             removed_in="0.0.3",
+#             details="This class is deprecated. Please use the new class 'AxisLayerFK' instead.")
 class AxisLayer(Module):
 
     def __init__(self):
