@@ -1,6 +1,6 @@
 import numpy as np
 import torch
-import deprecation
+# import deprecation
 
 
 class VizContext:
