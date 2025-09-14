@@ -5,10 +5,10 @@ Thanks to Zhang Xiong (MandyMo) for making this great code available on github !
 """
 
 import torch
-from deprecation import deprecated
+# from deprecation import deprecated
 
 
-@deprecated("This function is deprecated and will be removed in future versions.")
+# @deprecated("This function is deprecated and will be removed in future versions.")
 def _quat2mat(quat):
     """Convert quaternion coefficients to rotation matrix.
     Args:
@@ -43,7 +43,7 @@ def _quat2mat(quat):
     return rotMat
 
 
-@deprecated("This function is deprecated and will be removed in future versions.")
+# @deprecated("This function is deprecated and will be removed in future versions.")
 def _rodrigues(axisang):
     # axisang (B x N, 3)
     axisang_norm = torch.norm(axisang + 1e-8, p=2, dim=1)
@@ -58,7 +58,7 @@ def _rodrigues(axisang):
     return rot_mat
 
 
-@deprecated("This function is deprecated and will be removed in future versions.")
+# @deprecated("This function is deprecated and will be removed in future versions.")
 def _axis_angle(vector):
     angle = torch.norm(vector, 2, 1)
     axes = vector / angle.unsqueeze(1)
